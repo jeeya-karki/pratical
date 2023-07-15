@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<h1> Railway ticket Form</h1>
+<table>
+<form>
+    <tr>
+        <td>
+              Name : <input type="text" placeholder="Enter your name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+              Date of birth : <input type="date"> <br>  <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+              Contact no. :<input type="number"> <br> <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+              Gender : <input type="radio" name="gender" value="Male">Male
+                       <input type="radio" name="gender"  value="Female">Female
+                       <input type="radio" name="gender"  value="Other">Other <br>  <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Train ticket booking date : <input type="datetime-local">
+        </td>
+    </tr>
+    <tr>
+        <td>
+             Ticket : <input list="tickets" name="ticket" id="ticket">
+             <datalist id="tickets">
+                 <option value="Ahmedabad To Gorakhpur">
+                 <option value="Delhi To Mumbai">
+                 <option value="Gandhinagar To Goa">
+                 <option  value="Kolkata To Udaipur">
+                 <option value="Manali To Patna">
+             </datalist>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+           No. of person :<input list="No of persons" name="ticket" id="ticket">
+             <datalist id="No of persons">
+                 <option value="between 1 to 5">
+                 <option value="between 5 to 10">
+                 <option value="between 11 to 15">
+                 <option  value="between 15 to 20">
+                 <option value="between 20 to 25">
+             </datalist> <br> <br>
+            </td>
+    </tr>
+    <tr>
+        <td>
+           No. of tickets :<input type="text" placeholder="For confirmation w" > <br> <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Address : <textarea cols="20" rows="8"></textarea>  <br>  <br>
+        </td>
+     </tr>
+    <tr>
+        <td><input type="submit">
+            <input type="reset"></td>
+    </tr>
+
+
+</form>
+</table>
+</body>
+</html>
