@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Function without its name</title>
+
+</head>
+<body>
+
+<h1 id="output"> </h1>
+<input type="button"  value="count" id="countbtn" >
+
+<script>
+    let count=0;
+
+    document.getElementById("countbtn").onclick=() =>{
+        document.getElementById("output").innerHTML=count;
+        count=count+1;
+    }
+//we can also use function without its name ,in the place of functon name we use thi arrow(=>).
+//In this wheather we write the script tag in head or body tag there no change.
+</script>
+
+</body>
+</html>

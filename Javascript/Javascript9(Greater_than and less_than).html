@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greater_than and less_than </title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById("Maxbtn").onclick()=>
+            {
+
+                let No1 = eval(document.getElementById("No1").value);
+                let No2 = eval(document.getElementById("No2").value);
+                let No3 = eval(document.getElementById("No3").value);
+
+                if (No1>0 && No2>0 && No3>0)
+                {
+                    if (No1 > No2 && No1 > No3)
+                    {
+                        document.getElementById("output").innerHTML = `${No1} is a Maximum number`;
+                    } else if (No2 > No1 && No2 > No3)
+                    {
+                        document.getElementById("output").innerHTML = `${No2} is a Maximun number`;
+                    } else
+                    {
+                        document.getElementById("output").innerHTML = `${No3} is a Maximum number`;
+                    }
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML= `Invalid Number`;
+                }
+
+
+            }
+        })
+
+
+    </script>
+</head>
+<body>
+<form>
+
+    No1=<input type="number" id="No1"><br>
+    No2=<input type="number" id="No2"><br>
+    No3=<input type="number" id="No3"><br> <br>
+        <input type="button" id="Maxbtn" value="Max">
+        <input type="button" value="Reset">
+</form>
+
+    <h1 id="output">(Answer) </h1>
+
+</body>
+</html>

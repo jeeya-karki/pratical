@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic operation</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.getElementById("sumbtn").onclick=()=> {
+
+                let no1 = eval(document.getElementById("no1").value);
+                let no2 = eval(document.getElementById("no2").value);
+
+                document.getElementById("output").innerHTML=no1+no2;
+            }
+
+            document.getElementById("subtn").onclick=()=> {
+
+                let no1 = eval(document.getElementById("no1").value);
+                let no2 = eval(document.getElementById("no2").value);
+
+                document.getElementById("output").innerHTML=no1-no2;
+            }
+        })
+
+    </script>
+</head>
+<body>
+<form>
+
+    No1:<input type="number" id="no1"><br>
+    No2:<input type="number" id="no2"><br>
+    <input type="button" value="sum" id="sumbtn">
+    <input type="button" value="sub" id="subtn">
+    <input type="reset" value="reset">
+</form>
+
+<h1 id="output"></h1>
+
+
+</body>
+</html>
