@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculation of Income_Tax</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementById("tax").onclick=()=>{
+            let income=eval(document.getElementById("income").value);
+
+            if(income<300000)
+            {
+                document.getElementById("output").innerHTML="No tax is to be paid";
+            }
+            else
+            {
+                 document.getElementById("output").innerHTML="Tax is to be Paid";
+                 if(income>300000 && income<500000)
+                {
+                    document.getElementById("output").innerHTML=(income-300000)*0.10;
+                }
+                 else if(income>500000 && income<1000000)
+                {
+                    document.getElementById("output").innerHTML=(income-300000)*0.20;
+                }
+                 else if(income>1000000 && income<2000000)
+                 {
+                     document.getElementById("output").innerHTML=(income-300000)*0.30;
+                 }
+                 else
+                {
+                    document.getElementById("output").innerHTML=(income-300000)*0.40;
+                }
+
+
+            }
+        }
+    })
+
+    </script>
+</head>
+<body>
+<h1>Find your income tax</h1>
+Income : <input type="number" id="income" placeholder="per enum income"> <br>  <br>
+         <input type="button" id="tax" value="Total Tax">
+
+<h1 id="output"></h1>
+</body>
+</html>
