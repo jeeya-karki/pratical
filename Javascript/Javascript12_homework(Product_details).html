@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product details</title>
+    <style>
+        div{
+            display:flex;
+            float:right;
+          }
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.getElementById("publishToTable").onclick=()=>{
+              let p_name= document.getElementById("p_name").value;
+                let p_quantity= document.getElementById("p_quantity").value;
+                let p_code= document.getElementById("p_code").value;
+                let p_price= eval(document.getElementById("p_price").value);
+                document.getElementById("output").innerHTML;
+            }
+        })
+    </script>
+</head>
+<body>
+<h1 style="text-align: center"><u>Products details</u></h1>
+<div>
+    <table id="output" border="3">
+        <tr>
+            <th> Product name</th>
+            <th> Product quantity</th>
+            <th> Product code</th>
+            <th> Product price</th>
+            <th> Product type</th>
+        </tr>
+    </table>
+
+</div>
+<form>
+    <br>
+  Product name:<input type="text" id="p_name"><br> <br>
+  Product quantity:<input type="numxer" id="p_quantity"><br> <br>
+  Product HSN code:<input type="text" id="p_code"><br> <br>
+  Product Price:<input type="number" id="p_price"><br> <br>
+  Product Type:<select id="p_type">
+                <option >food</option>
+                <option >cloths</option>
+                <option >medicines</option>
+                <option >groceries</option>
+                <option >Other</option>
+</select><br>  <br>
+
+    <input type="button" value="PRODUCT_DETAILS" id="publishToTable()">
+</form>
+
+
+</body>
+</html>

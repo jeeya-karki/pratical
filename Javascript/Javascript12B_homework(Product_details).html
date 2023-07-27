@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Income Tax</title>
+    <script>
+        function publishToTable(){
+          const p_name= document.getElementById('p_name').value;
+          const p_price= document.getElementById('p_price').value;
+            submitbtn.innerHTML = (!p_name|| !p_price)?'p_name & p_price both values are required.': '';
+          if (p_name && p_price){
+              const tableElement = document.getElementById('table');
+              const trElement = document.createElement('tr');
+              const tbodyElement = document.createElement('tbody');
+              const p_nameEle = document.createElement('td');
+              const p_price = document.createElement('td');
+              p_name.innerHTML = p_name;
+              p_price.innerHTML = p_price;
+              trElement.appendChild(p_nameEle);
+              trElement.appendChild(p_price);
+              tbodyElement.appendChild(trElement);
+              tbodyElement.appendChild(tbodyElement);
+          }
+        }
+    </script>
+</head>
+<body>
+<div>
+   Product Name:<input type="text" id="p_name">
+   Product Price:<input type="number" id="p_price">
+    <input type="button" onclick="publishToTable()" value="submit" id="submitbtn">
+</div>
+
+<div id="tables">
+    <table id="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+</body>
+</html>
