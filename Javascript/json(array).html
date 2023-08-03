@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>json </title>
+
+</head>
+<body>
+<table>
+<td class="output"></td>
+<td class="output"></td>
+</table>
+
+
+Element name : <input type="text" id="element1"><br/>
+Element price : <input type="number" id="element2"><br/>
+<input type="button" value="add" id="addbtn">
+
+
+<script>
+
+  let array1=["Aakash",3000];
+
+
+  for (let i = 0; i < array1.length; i++)
+  {
+    document.getElementById("output").innerHTML+=array1[i]+"<br/>";
+  }
+
+  document.getElementById("addbtn").onclick=()=>{
+    array1.push(document.getElementById("element1").value);
+    document.getElementById("output").innerHTML="";
+    for (let i = 0; i < array1.length; i++)
+    {
+      document.getElementById("output").innerHTML+=array1[i]+"<br/>";
+    }
+    document.getElementById("element1").value="";
+
+
+    array1.push(document.getElementById("element2").value);
+    document.getElementById("output").innerHTML="";
+    for (let i = 0; i < array1.length; i++)
+    {
+      document.getElementById("output").innerHTML+=array1[i]+"<br/>";
+    }
+    document.getElementById("element2").value="";
+  }
+
+</script>
+
+</body>
+</html>
